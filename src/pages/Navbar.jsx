@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
-import Typed from 'react-typed';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg';
 
@@ -27,12 +26,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage}) => {
         <nav className={`${navbarBg} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
                 <h5 className="font-playfair text-3xl font-bold">
-                    <Typed 
-                        strings={['AS', 'Portofolio']}
-                        typeSpeed={100}
-                        backSpeed={150}
-                        loop
-                    />
+                    AS
                 </h5>
 
                 {/* DESKTOP NAV */}
