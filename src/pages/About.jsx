@@ -31,7 +31,7 @@ const About = () => {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
                     variants={{
                         hidden: { opacity: 0, x: -50 },
@@ -50,12 +50,12 @@ const About = () => {
                     </p>
                 </motion.div>
             </div>
-            <div className="rounded-lg shadow-md shadow-gray-800 hover:scale-105 transition duration-500">
-                    <img 
-                        className="rounded-lg w-full h-auto"
-                        src="../assets/about.jpg" 
-                        alt="aboutimg"
-                    />
+            <div className="max-w-[300px] md:max-w-[400px] rounded-lg shadow-md shadow-gray-800 mt-10 md:mt-0 hover:scale-105 transition duration-500">
+                <img 
+                    className="rounded-lg w-full h-auto "
+                    src="../assets/about.jpg" 
+                    alt="aboutimg"
+                />
             </div>
         </div>
     </section>
