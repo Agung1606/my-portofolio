@@ -39,7 +39,7 @@ function App() {
       />
 
       {/* HOME */}
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto min-h-screen md:h-full">
         {isDesktop && (
           <DotGroup 
             selectedPage={selectedPage}
@@ -47,7 +47,6 @@ function App() {
           />
         )}
         <motion.div
-          amount="0.5"
           onViewportEnter={() => setSelectedPage('home')}
         >
           <Landing selectedPage={selectedPage} />
@@ -56,9 +55,8 @@ function App() {
       <LineGradient />
 
       {/* ABOUT */}
-      <div className="w-5/6 mx-auto">
+      <div className="w-5/6 mx-auto min-h-screen">
         <motion.div
-          amount="0.5"
           onViewportEnter={() => setSelectedPage('about')}
         >
           <About />
@@ -67,9 +65,8 @@ function App() {
       <LineGradient />
 
       {/* MY SKILLS */}
-      <div className="w-5/6 mx-auto ">
+      <div className="w-5/6 mx-auto min-h-screen">
         <motion.div
-           amount="0.5"
           onViewportEnter={() => setSelectedPage('skills')}
         >
           <MySkills />
@@ -78,9 +75,8 @@ function App() {
       <LineGradient />
 
       {/* PROJECTS */}
-      <div className="w-5/6 mx-auto">
+      <div className="w-5/6 mx-auto min-h-screen">
           <motion.div
-             amount="0.5"
             onViewportEnter={() => setSelectedPage('projects')}
           >
             <Projects />
@@ -91,7 +87,6 @@ function App() {
       {/* CONTACT */}
       <div className="w-5/6 mx-auto md:h-full">
           <motion.div
-             amount="0.5"
             onViewportEnter={() => setSelectedPage('contact')}
           >
             <Contact />

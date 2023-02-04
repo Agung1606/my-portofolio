@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const inputStyle = `mb-5 w-full bg-slate-600 font-semibold p-3 rounded-lg focus:outline-none`
+
   const {
     register,
     trigger,
@@ -75,7 +77,7 @@ const Contact = () => {
               method="POST"
             >
               <input 
-                className="w-full bg-slate-600 font-semibold p-3 rounded-sm"
+                className={inputStyle}
                 type="text" 
                 placeholder="Your Name"
                 {...register("name", {
@@ -91,7 +93,7 @@ const Contact = () => {
               )}
 
               <input 
-                className="w-full bg-slate-600 font-semibold p-3 rounded-sm mt-5"
+                className={inputStyle}
                 type="text" 
                 placeholder="Your Email"
                 {...register("email", {
@@ -99,7 +101,7 @@ const Contact = () => {
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, // regex for email validation
                 })}
               />
-              {errors.name && (
+              {errors.email && (
                 <p className="text-red mt-1">
                   {errors.email.type === "required" && "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
@@ -107,7 +109,7 @@ const Contact = () => {
               )}
 
               <textarea 
-                className="w-full bg-slate-600 font-semibold p-3 rounded-sm mt-5"
+                className={inputStyle}
                 type="text" 
                 rows="4"
                 cols="50"
@@ -117,7 +119,7 @@ const Contact = () => {
                   maxLength: 2000,
                 })}
               />
-              {errors.name && (
+              {errors.message && (
                 <p className="text-red mt-1">
                   {errors.message.type === "required" && "This field is required."}
                   {errors.message.type === "maxLength" && "Max length is 2000 char."}

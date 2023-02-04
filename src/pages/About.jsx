@@ -52,7 +52,7 @@ const About = () => {
             </div>
             <div className="max-w-[300px] md:max-w-[400px] rounded-lg shadow-md shadow-gray-800 mt-10 md:mt-0 hover:scale-105 transition duration-500">
                 <img 
-                    className="rounded-lg w-full h-auto "
+                    className="rounded-lg w-full h-auto"
                     src="../assets/about.jpg" 
                     alt="aboutimg"
                 />

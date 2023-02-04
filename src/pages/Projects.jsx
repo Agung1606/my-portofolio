@@ -75,6 +75,12 @@ const Projects = () => {
                 projectUrl="/adminDashboard"
                 codeUrl="https://github.com/Agung1606/fullstack-admin-dashboard"
             />
+            <ProjectCard 
+                title="Gym"
+                backgroundImg="../assets/projects/gym.png"
+                projectUrl="/gym"
+                codeUrl="https://github.com/Agung1606/gym"
+            />
         </div>
     </section>
   )

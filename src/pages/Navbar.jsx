@@ -5,13 +5,14 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg';
 
 const Link = ({page, selectedPage, setSelectedPage, isDesktop=true }) => {
+    
     const lowerCasePage = page.toLowerCase();
     const desktopStyle = `border-b border-yellow`;
     return(
         <AnchorLink
-            className={`${selectedPage === lowerCasePage ? `text-yellow ${isDesktop && desktopStyle}` : ""} text-lg  hover:text-yellow transition duration-500`}
-            href={`#${lowerCasePage}`}
-            onClick={() => setSelectedPage(!lowerCasePage)}
+        className={`${selectedPage === lowerCasePage ? `text-yellow ${isDesktop && desktopStyle}` : "text-white"} text-lg hover:text-yellow transition duration-500`}
+        href={`#${lowerCasePage}`}
+        onClick={() => setSelectedPage(!lowerCasePage)}
         >
             {page}
         </AnchorLink>
@@ -22,6 +23,10 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage}) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
     const navbarBg = isTopOfPage ? "" : "bg-red";
+
+    const mobileNavStyle = isMenuToggled 
+        ? `fixed right-0 bottom-0 h-full w-[300px] bg-[#1e3a8a] ease-in duration-500` 
+        : `fixed right-[-100%] bottom-0 h-full w-[300px] ease-in duration-500`;
     return (
         <nav className={`${navbarBg} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
@@ -68,8 +73,8 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage}) => {
                 )}
 
                 {/* MOBILE MENU POPUP */}
-                {!isAboveSmallScreens && isMenuToggled && (
-                    <div className="fixed right-0 bottom-0 h-full bg-[#1e3a8a] w-[300px]">
+                {!isAboveSmallScreens && (
+                    <div className={mobileNavStyle}>
                         {/* CLOSE ICON */}
                         <div className="flex justify-end p-12 text-2xl">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
