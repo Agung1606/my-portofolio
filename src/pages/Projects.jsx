@@ -19,13 +19,16 @@ const ProjectCard = ({ title, backgroundImg, projectUrl, codeUrl}) => {
                 <h3 className="font-playfair font-semibold text-2xl xs:text-4xl xs:tracking-wider text-center mb-3">
                     {title}
                 </h3>
-                <div className="flex items-center gap-x-3">
+                <div className="flex justify-center items-center gap-x-3">
+                    {projectUrl && (
                     <a 
-                    href={projectUrl}
-                    className="text-center font-playfair rounded-lg bg-deep-blue font-bold text-sm xs:p-1 xs:text-lg cursor-pointer hover:bg-red"
+                        href={projectUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-center font-playfair rounded-lg bg-deep-blue font-bold text-sm xs:p-1 xs:text-lg cursor-pointer hover:bg-red"
                     >
-                        More Info
-                    </a>
+                        Visit
+                    </a>)}
                     <a 
                         target="_blank"
                         rel="noreferrer"
@@ -66,19 +69,19 @@ const Projects = () => {
             <ProjectCard 
                 title="Facebook"
                 backgroundImg="../assets/projects/facebook-project.png"
-                projectUrl="/facebook"
+                projectUrl=""
                 codeUrl="https://github.com/Agung1606/facebook"
             />
             <ProjectCard 
                 title="Admin Dashboard"
                 backgroundImg="../assets/projects/admin-project.png"
-                projectUrl="/adminDashboard"
+                projectUrl=""
                 codeUrl="https://github.com/Agung1606/fullstack-admin-dashboard"
             />
             <ProjectCard 
                 title="Gym"
                 backgroundImg="../assets/projects/gym.png"
-                projectUrl="/gym"
+                projectUrl="https://gym-pi.vercel.app/"
                 codeUrl="https://github.com/Agung1606/gym"
             />
         </div>
