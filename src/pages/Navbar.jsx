@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { TypeAnimation } from 'react-type-animation';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { CgClose } from 'react-icons/cg';
 
@@ -31,7 +32,16 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage}) => {
         <nav className={`${navbarBg} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
                 <h5 className="font-playfair text-3xl font-bold">
-                    AS
+                    <TypeAnimation 
+                        sequence={[
+                            'AS',
+                            2000,
+                            'Hello :)',
+                            2000
+                        ]}
+                        speed={50}
+                        repeat={Infinity}
+                    />
                 </h5>
 
                 {/* DESKTOP NAV */}
