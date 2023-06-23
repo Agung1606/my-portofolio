@@ -2,8 +2,6 @@ import React from 'react';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { BsTwitter } from 'react-icons/bs';
 
-// <img src="../assets/linkedin.png" alt="linkedin-link" />
-
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">

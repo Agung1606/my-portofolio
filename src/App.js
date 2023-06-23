@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import useMediaQuery from "./hooks/useMediaQuery";
-import LineGradient from './components/LineGradient';
-import Navbar from "./pages/Navbar";
-import DotGroup from "./pages/DotGroup";
-import Landing from "./pages/Landing";
-import About from "./pages/About";
-import MySkills from "./pages/MySkills";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import Footer from "./pages/Footer";
+import {
+  Navbar,
+  DotGroup,
+  Landing,
+  About,
+  MySkills,
+  Projects,
+  Contact,
+  Footer,
+} from "./pages";
+
+import { LineGradient } from "./components";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -18,11 +21,11 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if(window.scrollY === 0) {
+      if (window.scrollY === 0) {
         setIsTopOfPage(true);
         setSelectedPage("home");
       }
-      if(window.scrollY !== 0) setIsTopOfPage(false);
+      if (window.scrollY !== 0) setIsTopOfPage(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,7 +35,7 @@ function App() {
 
   return (
     <div className="app bg-deep-blue">
-      <Navbar 
+      <Navbar
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
@@ -41,14 +44,12 @@ function App() {
       {/* HOME */}
       <div className="w-5/6 mx-auto min-h-screen md:h-full">
         {isDesktop && (
-          <DotGroup 
+          <DotGroup
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
         )}
-        <motion.div
-          onViewportEnter={() => setSelectedPage('home')}
-        >
+        <motion.div onViewportEnter={() => setSelectedPage("home")}>
           <Landing selectedPage={selectedPage} />
         </motion.div>
       </div>
@@ -56,41 +57,33 @@ function App() {
 
       {/* ABOUT */}
       <div className="w-5/6 mx-auto min-h-screen">
-        <motion.div
-          onViewportEnter={() => setSelectedPage('about')}
-        >
+        <motion.div onViewportEnter={() => setSelectedPage("about")}>
           <About />
-        </motion.div >
+        </motion.div>
       </div>
       <LineGradient />
 
       {/* MY SKILLS */}
       <div className="w-5/6 mx-auto min-h-screen">
-        <motion.div
-          onViewportEnter={() => setSelectedPage('skills')}
-        >
+        <motion.div onViewportEnter={() => setSelectedPage("skills")}>
           <MySkills />
-        </motion.div >
+        </motion.div>
       </div>
       <LineGradient />
 
       {/* PROJECTS */}
       <div className="w-5/6 mx-auto min-h-screen">
-          <motion.div
-            onViewportEnter={() => setSelectedPage('projects')}
-          >
-            <Projects />
-          </motion.div>
+        <motion.div onViewportEnter={() => setSelectedPage("projects")}>
+          <Projects />
+        </motion.div>
       </div>
       <LineGradient />
 
       {/* CONTACT */}
       <div className="w-5/6 mx-auto md:h-full">
-          <motion.div
-            onViewportEnter={() => setSelectedPage('contact')}
-          >
-            <Contact />
-          </motion.div>
+        <motion.div onViewportEnter={() => setSelectedPage("contact")}>
+          <Contact />
+        </motion.div>
       </div>
 
       {/* FOOTER */}
