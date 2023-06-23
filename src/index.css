@@ -12,3 +12,17 @@ body,
   background-color: #010026;
   @apply text-white; /* default text color is white */
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #010026;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dc4492;
+}
