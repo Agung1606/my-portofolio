@@ -14,7 +14,7 @@ const Landing = ({ setSelectedPage }) => {
       {/* IMAGE SECTION */}
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         <img
-          src={assets.agungPhoto}
+          src={assets.avatar}
           alt="agungpicture"
           className="z-10 w-full max-w-[400px] md:max-w-[600px] hover:scale-105 transition duration-500"
         />
@@ -33,10 +33,10 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-4xl xs:text-5xl font-playfair z-10 text-center md:text-start">
+          <p className="text-blue xs:text-white text-4xl xs:text-5xl font-playfair z-10 text-center md:text-start">
             Agung {""}
             <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20
+              className="xs:relative text-blue xs:text-deep-blue xs:font-semibold z-20
                             xs:before:content-brush before:absolute before:-left-[28px]
                             before:-top-[80px] before:z-[-1]"
             >

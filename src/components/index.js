@@ -1,9 +1,13 @@
 import LineGradient from "./LineGradient";
-import SkillCard from "./SkillCard";
 import SocialMediaIcons from "./SocialMediaIcons";
+import SkillCard from "./SkillCard";
+import ProjectCard from "./ProjectCard";
+import Link from "./Link";
 
 export {
   LineGradient,
+  SocialMediaIcons,
   SkillCard,
-  SocialMediaIcons
+  ProjectCard,
+  Link
 }
