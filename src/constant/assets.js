@@ -1,5 +1,6 @@
 import avatar from "../assets/dev-ed-wave.png";
 import about from "../assets/about.jpg";
+import contact from "../assets/contact-image.jpeg"
 
 import react from "../assets/skills/react.png";
 import javascript from "../assets/skills/javascript.png";
@@ -17,6 +18,7 @@ import nftAppProject from "../assets/projects/nftApp.png";
 const assets = {
   avatar,
   about,
+  contact,
   react,
   javascript,
   typescript,
