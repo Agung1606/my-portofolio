@@ -88,4 +88,11 @@ export const PROJECTS = [
     projectUrl: "https://gym-pi.vercel.app/",
     codeUrl: "https://github.com/Agung1606/gym",
   },
+  {
+    id: 4,
+    title: "Nike",
+    backgroundImg: assets.nikeLandingPage,
+    projectUrl: "https://nike-landing-page-livid.vercel.app",
+    codeUrl: "https://github.com/Agung1606/nike-landing-page",
+  },
 ];

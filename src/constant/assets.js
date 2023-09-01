@@ -14,6 +14,7 @@ import redux from "../assets/skills/redux.png";
 import adminProject from "../assets/projects/admin-project.png";
 import gymProject from "../assets/projects/gym.png";
 import nftAppProject from "../assets/projects/nftApp.png";
+import nikeLandingPage from "../assets/projects/nike-landing-page.png"
 
 const assets = {
   avatar,
@@ -29,7 +30,8 @@ const assets = {
   redux,
   adminProject,
   gymProject,
-  nftAppProject
+  nftAppProject,
+  nikeLandingPage
 };
 
 export default assets;
