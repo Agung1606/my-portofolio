@@ -13,7 +13,7 @@ const navoptions = [
   },
   {
     id: 2,
-    page: "About",
+    page: "About Me",
   },
   {
     id: 3,
@@ -81,6 +81,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }) => {
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
               {navoptions.map((item) => (
                 <Link
+                  key={item.id}
                   isDesktop={false}
                   page={item.page}
                   selectedPage={selectedPage}

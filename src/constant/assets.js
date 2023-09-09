@@ -15,6 +15,7 @@ import adminProject from "../assets/projects/admin-project.png";
 import gymProject from "../assets/projects/gym.png";
 import nftAppProject from "../assets/projects/nftApp.png";
 import nikeLandingPage from "../assets/projects/nike-landing-page.png"
+import agungSosmed from "../assets/projects/agung-sosmed.png";
 
 const assets = {
   avatar,
@@ -31,7 +32,8 @@ const assets = {
   adminProject,
   gymProject,
   nftAppProject,
-  nikeLandingPage
+  nikeLandingPage,
+  agungSosmed
 };
 
 export default assets;

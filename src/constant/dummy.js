@@ -68,28 +68,35 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    id: 1,
+    id: "32414",
     title: "NFT Marketplace",
     backgroundImg: assets.nftAppProject,
     projectUrl: "https://nftapp-five.vercel.app/",
     codeUrl: "https://github.com/Agung1606/NFTsApp",
   },
   {
-    id: 2,
+    id: "9089",
+    title: "Social Media",
+    backgroundImg: assets.agungSosmed,
+    projectUrl: "",
+    codeUrl: "https://github.com/Agung1606/G297K",
+  },
+  {
+    id: "5634",
     title: "Admin Dashboard",
     backgroundImg: assets.adminProject,
     projectUrl: "",
     codeUrl: "https://github.com/Agung1606/fullstack-admin-dashboard",
   },
   {
-    id: 3,
+    id: "56746",
     title: "Gym",
     backgroundImg: assets.gymProject,
     projectUrl: "https://gym-pi.vercel.app/",
     codeUrl: "https://github.com/Agung1606/gym",
   },
   {
-    id: 4,
+    id: "12342",
     title: "Nike",
     backgroundImg: assets.nikeLandingPage,
     projectUrl: "https://nike-landing-page-livid.vercel.app",

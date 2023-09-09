@@ -23,7 +23,7 @@ const SocialMediaIcons = () => {
             <FaGithub />
         </a>
         <a 
-            href="https://twitter.com/AGNGSPTRAAA"
+            href="https://twitter.com/agngsptra16_"
             target="_blank"
             rel="noreferrer"
             className="text-4xl hover:opacity-50 transition duration-500"

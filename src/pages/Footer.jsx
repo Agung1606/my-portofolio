@@ -11,7 +11,7 @@ const Footer = () => {
                     AGUNG SAPUTRA
                 </p>
                 <p className="font-playfair text-md text-yellow">
-                    ©2023 AGNGSPTRA. All Right Reversed
+                    ©2023
                 </p>
             </div>
         </div>
